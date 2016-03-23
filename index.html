@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/cssad.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="sidebar-wrapper">
+			<img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
+			<ul class="sidebar-nav">
+				<li>
+					<a href="#">Inicio</a>
+				</li>
+				<li>
+			    	<a href="#">El Ministerio</a>
+				</li>
+				<li>
+			    	<a href="#">Conglomerados</a>
+				</li>
+				<li>
+			    	<a href="#">Servicios</a>
+				</li>
+				<li>
+			    	<a href="#">Noticias</a>
+				</li>
+				<li>
+			    	<a href="#">Descargas</a>
+				</li>
+			</ul>
+			<div id="custom-search-input">
+				<div class="input-group col-md-12">
+					<input type="text" class="  search-query form-control" placeholder="Buscar" />
+					<span class="input-group-btn">
+						<button class="btn btn-danger" type="button">
+							<span class=" glyphicon glyphicon-search"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="sidebar-icon">
+				<img src="./img/bbl.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/bt.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/bfb.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/byt.png" alt="Estadisticas" class="img-responsive">
+			</div>
+		</div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+			<header>
+				<img src="./img/header2.png" alt="Estadisticas" class="img-responsive">
+				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+			</header>
+			<div class="container-fluid">
+				<section class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<p class="titulos">Información <span></span></p>
+							<img src="./img/botonInfo.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<p class="titulos">Noticias</p>
+							<img src="./img/botonoti.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<p class="titulos">Runopa</p>
+							<img src="./img/botonrunopa.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<p class="titulos">Estadisticas</p>
+							<img src="./img/botonestad.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-sm-6 col-xs-12">
+							<p class="titulos">Noticias Internas</p>
+							<img src="./img/botononinter.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+						<div class="col-lg-6 col-sm-6 col-xs-12">
+							<p class="titulos">Videos</p>
+							<img src="./img/galVid.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+					</div>
+				</section>
+				<section class="col-lg-4">
+					<div class="row">
+						<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+							<p class="titulos">Reporte Agro-climatico</p>
+							<img src="./img/botonrepagri.jpg" alt="Estadisticas" class="img-responsive">
+						</div>
+						<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+							<div class="row">
+								<p class="titulos">Enlaces</p>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<img src="./img/botonmatvv.jpg" alt="Estadisticas" class="img-responsive">
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<img src="./img/botonrudae.jpg" alt="Estadisticas" class="img-responsive">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<img src="./img/boton800agri.jpg" alt="Estadisticas" class="img-responsive">
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<img src="./img/botonmadpue.jpg" alt="Estadisticas" class="img-responsive">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+</html>
