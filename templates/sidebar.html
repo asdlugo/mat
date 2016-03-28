@@ -1,0 +1,53 @@
+<div id="wrapper">
+		<div id="sidebar-wrapper">
+			<img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
+			<ul class="sidebar-nav">
+				<li>
+					<a href="#">Inicio</a>
+				</li>
+				<li>
+			    	<a href="#">El Ministerio</a>
+				</li>
+				<li>
+			    	<a href="#">Conglomerados</a>
+				</li>
+				<li>
+			    	<a href="#">Servicios</a>
+				</li>
+				<li>
+			    	<a href="#">Noticias</a>
+				</li>
+				<li>
+			    	<a href="#">Descargas</a>
+				</li>
+			</ul>
+			<div id="custom-search-input">
+				<div class="input-group col-md-12">
+					<input type="text" class="  search-query form-control" placeholder="Buscar" />
+					<span class="input-group-btn">
+						<button class="btn btn-danger" type="button">
+							<span class=" glyphicon glyphicon-search"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="sidebar-icon">
+				<img src="./img/bbl.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/bt.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/bfb.png" alt="Estadisticas" class="img-responsive">
+				<img src="./img/byt.png" alt="Estadisticas" class="img-responsive">
+			</div>
+		</div>
+        <!-- /#sidebar-wrapper -->
+
+	<script  type="text/javascript" charset="utf-8" >
+
+$('document').ready(function(){
+	 $("span#menu-toggle").on('click',function(e) {
+	    e.preventDefault();
+        $("div#wrapper").toggleClass("toggled");
+    });
+});
+
+   
+	</script>
