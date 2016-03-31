@@ -6,9 +6,7 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('matApp', [
-  'ngRoute'
-]);
+var app = angular.module('matApp', ['ngRoute','ngDialog']);
 
 /**
  * Configure the Routes
@@ -53,3 +51,13 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
     selector: "a[data-toggle=tooltip]"
   })
 });
+
+/*app.controller('matApp', function ($scope, ngDialog) {
+    $scope.clickToOpen = function () {
+        ngDialog.open({ 
+        template: 'sidebar.html', 
+        className: 'ngdialog-theme-default' 
+      });
+    };
+});
+*/
