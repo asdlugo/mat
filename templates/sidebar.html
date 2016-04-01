@@ -1,11 +1,11 @@
-<div id="sidebar-wrapper" ng-controller="MainCtrl">
+<div id="sidebar-wrapper">
 	<img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
 	<ul class="sidebar-nav">
 		<li>
 			<a href="#">Inicio</a>
 		</li>
 		<li>
-	    	<a href="#">El Ministerio</a>
+	    	<a href="#" ng-click="openContactForm()">El Ministerio</a>
 		</li>
 		<li>
 	    	<a href="#">Conglomerados</a>
@@ -37,18 +37,3 @@
 		<img src="./img/byt.png" alt="youtube" class="img-responsive">
 	</div>
 </div>
-       
-
-
-        <!-- /#sidebar-wrapper -->
-
-<script  type="text/javascript" charset="utf-8" >
-
-$('document').ready(function(){
-	$("span#menu-toggle").on('click',function(e) {
-		e.preventDefault();
-		$("div#wrapper").toggleClass("toggled");
-	});
-});
-
-</script>

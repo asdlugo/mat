@@ -1,7 +1,7 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('matApp', ['ngRoute', 'ngDialog', 'MainCtrl']);
+var app = angular.module('matApp', ['ngRoute', 'ngDialog']);
 
 /**
  * Configure the Routes
@@ -9,7 +9,7 @@ var app = angular.module('matApp', ['ngRoute', 'ngDialog', 'MainCtrl']);
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", {templateUrl: "partials/sidebar.html", controller: "PageCtrl"})
+    .when("/", {templateUrl: "templates/sidebar.html", controller: "PageCtrl"})
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     .when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
@@ -53,7 +53,7 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
 
 app.controller('MainCtrl', function ($scope, ngDialog) {
   $scope.openContactForm = function() {
-    ngDialog.openConfirm({template: 'contact_us.html',
+    ngDialog.openConfirm({template: '../partials/about.html',
       scope: $scope //Pass the scope object if you need to access in the template
     }).then(
       function(value) {
@@ -64,4 +64,33 @@ app.controller('MainCtrl', function ($scope, ngDialog) {
       }
     );
   };
+});
+
+$(document).ready(function(){
+  $("span#menu-toggle").on('click',function(e) {
+    e.preventDefault();
+    $("div#wrapper").toggleClass("toggled");
+  });
+});
+
+app.directive('sidebar', function(ngDialog) {
+  return {
+    restrict: 'E',
+    templateUrl: './templates/sidebar.html',
+    replace: true,
+    link: function ($scope) {
+      $scope.openContactForm = function() {
+        ngDialog.openConfirm({template: './partials/about.html',
+        scope: $scope //Pass the scope object if you need to access in the template
+      }).then(
+        function(value) {
+        //save the contact form
+        },
+        function(value) {
+        //Cancel or do nothing
+        }
+      );
+      }
+    }
+  }
 });
