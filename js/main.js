@@ -1,12 +1,7 @@
 /**
- * AngularJS Tutorial 1
- * @author Nick Kaye <nick.c.kaye@gmail.com>
- */
-
-/**
  * Main AngularJS Web Application
  */
-var app = angular.module('matApp', ['ngRoute','ngDialog']);
+var app = angular.module('matApp', ['ngRoute', 'ngDialog', 'MainCtrl']);
 
 /**
  * Configure the Routes
@@ -52,12 +47,21 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   })
 });
 
-/*app.controller('matApp', function ($scope, ngDialog) {
-    $scope.clickToOpen = function () {
-        ngDialog.open({ 
-        template: 'sidebar.html', 
-        className: 'ngdialog-theme-default' 
-      });
-    };
+/**
+ * Modal box
+ */
+
+app.controller('MainCtrl', function ($scope, ngDialog) {
+  $scope.openContactForm = function() {
+    ngDialog.openConfirm({template: 'contact_us.html',
+      scope: $scope //Pass the scope object if you need to access in the template
+    }).then(
+      function(value) {
+        //save the contact form
+      },
+      function(value) {
+        //Cancel or do nothing
+      }
+    );
+  };
 });
-*/

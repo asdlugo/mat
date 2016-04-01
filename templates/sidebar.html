@@ -1,4 +1,4 @@
-<div id="sidebar-wrapper">
+<div id="sidebar-wrapper" ng-controller="MainCtrl">
 	<img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
 	<ul class="sidebar-nav">
 		<li>
@@ -42,14 +42,13 @@
 
         <!-- /#sidebar-wrapper -->
 
-	<script  type="text/javascript" charset="utf-8" >
+<script  type="text/javascript" charset="utf-8" >
 
 $('document').ready(function(){
-	 $("span#menu-toggle").on('click',function(e) {
-	    e.preventDefault();
-        $("div#wrapper").toggleClass("toggled");
-    });
+	$("span#menu-toggle").on('click',function(e) {
+		e.preventDefault();
+		$("div#wrapper").toggleClass("toggled");
+	});
 });
 
-   
-	</script>
+</script>
