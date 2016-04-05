@@ -1,0 +1,22 @@
+<div id="ministerio">
+	<p>El ministerio</p>
+</div>
+
+
+
+
+<script>
+$.getJSON( "http://192.168.4.182/sitio/web/app_dev.php/api/informacions/0", function( data ) {
+ // alert(JSON.parse(data[0]))
+  var items = [];
+  $.each( data[0], function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "div#ministerio" );
+});
+
+</script>

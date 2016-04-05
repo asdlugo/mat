@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="matApp">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=icon href="./img/logomat.png" sizes="16x16" type="image/png">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/cssad.css">
 	<link rel="stylesheet" href="./css/ngDialog.css">
@@ -10,9 +11,10 @@
     <link rel="stylesheet" href="./css/ngDialog-theme-default.css">
     <link rel="stylesheet" href="./css/ngDialog-theme-plain.css">
     <link rel="stylesheet" href="./css/ngDialog-custom-width.css">
+    <link rel="stylesheet" href="./css/carousel-3d.css">
 	<title>Document</title>
 </head>
-<body ng-app="matApp">
+<body>
 
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.js"></script>
@@ -20,16 +22,21 @@
 	<script src="./js/angular.js"></script>
 	<script src="./js/ngDialog.js"></script>
 	<script src="./js/angular-route.js"></script>
+	<script src="./js/angular-touch.js"></script>
+	<script src="./js/angular-carousel.js"></script>
+	<script src="./js/angular-swipe.js"></script>
+	<script src="./js/carousel-3d.js"></script>
 	<script src="./js/main.js"></script>
 
 <!--div ng-include='"templates/footer.html"'></div-->
 <div id="wrapper">
 	<sidebar></sidebar>
+	<content></content>
 	<!--div ng-include='"templates/sidebar.html"'></div-->
-	<div ng-include='"templates/content.html"'></div>
+	<!--div ng-include='"templates/content.html"'></div-->
 	<div ng-include='"templates/footer.html"'></div>
 </div>
 
-<div ng-view></div>
+<!--div ng-view></div-->
 </body>
 </html>

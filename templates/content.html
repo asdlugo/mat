@@ -43,7 +43,15 @@
 				</div>
 				<div class="col-lg-6 col-sm-6 col-xs-12">
 					<p class="titulos">Videos</p>
-					<img src="./img/galVid.jpg" alt="Estadisticas" class="img-responsive center-block">
+					<div carousel3d ng-model="arrayOfObjects">
+						<div carousel3d-slide ng-repeat="slide in app.slides track by $index">
+							<figure>
+							<img ng-src="{{slide.src}}" alt=""/>
+							<figcaption ng-bind="slide.caption"></figcaption>
+							</figure>
+						</div>
+					</div>
+					<!--img src="./img/galVid.jpg" alt="Estadisticas" class="img-responsive center-block"-->
 				</div>
 			</div>
 		</section>
