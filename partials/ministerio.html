@@ -1,16 +1,22 @@
 <div id="ministerio">
-	<p>El ministerio</p>
+  <p>El ministerio</p>
+     <a href="#" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-hand-left"></span> Atrás
+     </a>
+    <a href="#" class="btn btn-success btn-lg"style="float: right">
+            <span class="glyphicon glyphicon-hand-right"></span> Adelante
+     </a>
 </div>
 
 
 
 
 <script>
-$.getJSON( "http://192.168.4.182/sitio/web/app_dev.php/api/informacions/0", function( data ) {
+$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/0", function( data ) {
  // alert(JSON.parse(data[0]))
   var items = [];
   $.each( data[0], function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
+    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
  
   $( "<ul/>", {

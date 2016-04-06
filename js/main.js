@@ -24,6 +24,7 @@ app.directive('sidebar', function(ngDialog) {
     link: function ($scope) {
       $scope.openDialog = function(plantilla) {
         ngDialog.openConfirm({
+          className: 'ngdialog-theme-plain custom-width',
           template: './partials/'+plantilla+'.html',
           scope: $scope,
       });
