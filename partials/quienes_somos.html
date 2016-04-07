@@ -1,14 +1,12 @@
-<h2>El Ministerio</h2>  
-
-<div id="ministerio" class="fondo">
-
+<div id="quienes_somos">
+  <p>Quiénes Somos</p>
 </div>
 
 
 
 
 <script>
-$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/0", function( data ) {
+$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/2", function( data ) {
  // alert(JSON.parse(data[0]))
   var items = [];
   $.each( data[0], function( key, val ) {
@@ -16,9 +14,9 @@ $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/0", function
   });
  
   $( "<ul/>", {
-    "class": "listado",
+    "class": "my-new-list",
     html: items.join( "" )
-  }).appendTo( "div#ministerio" );
+  }).appendTo( "div#quienes_somos" );
 });
 
 </script>
