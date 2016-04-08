@@ -83,7 +83,8 @@
 
 /* Sidebar Styles */
 
-.sidebar-nav {
+.sidebar-nav,
+.sidebar-nav ul {
     /*position: absolute; */
     top: 0;
     width: 200px;
@@ -91,7 +92,9 @@
     padding: 0;
     list-style: none;
 }
-
+/*ul.sidebar-nav li ul li{
+	text-indent: 50px;
+}*/
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -104,12 +107,36 @@
     color: #fff;
 }
 
+.sidebar-nav li ul a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #068046;
+
+}
+
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
 
+.sidebar-nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	height:0;
+	overflow: hidden;
+	transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+}
+
+.sidebar-nav li:hover ul {
+    height:160px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;

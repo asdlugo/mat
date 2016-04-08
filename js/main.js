@@ -8,10 +8,12 @@ $(document).ready(function(){
   });
 });
 
+
+
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('matApp', ['ngRoute', 'ngDialog', 'angular-carousel-3d']);
+var app = angular.module('matApp', ['ngRoute', 'ngDialog']);
 
 /**
  * Modal box sidebar
@@ -40,10 +42,13 @@ app.directive('content', function() {
 
   }
 });
+ app.directive('footer', function() {
+  return {
+    restrict: 'E',
+    templateUrl: './templates/footer.html',
 
-
-
-
+  }
+});
 
 
 
