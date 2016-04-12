@@ -1,0 +1,24 @@
+<h2>Visión</h2>  
+
+<div id="vision" class="fondo">
+
+</div>
+
+
+
+
+<script>
+$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/2", function( data ) {
+ // alert(JSON.parse(data[0]))
+  var items = [];
+  $.each( data[0], function( key, val ) {
+    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "listado",
+    html: items.join( "" )
+  }).appendTo( "div#vision" );
+});
+
+</script>

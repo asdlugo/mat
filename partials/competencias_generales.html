@@ -1,0 +1,29 @@
+<h2>Competencias Generales</h2> 
+
+<div id="competencias" class= "fondo" >
+     <!--a href="#" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-hand-left"></span> Atrás
+     </a>
+    <a href="#" class="btn btn-success btn-lg"style="float: right">
+            <span class="glyphicon glyphicon-hand-right"></span> Adelante
+     </a-->
+</div>
+
+
+
+
+<script>
+$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/informacions/4", function( data ) {
+ // alert(JSON.parse(data[0]))
+  var items = [];
+  $.each( data[0], function( key, val ) {
+    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "listado",
+    html: items.join( "" )
+  }).appendTo( "div#competencias" );
+});
+
+</script>
