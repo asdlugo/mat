@@ -105,7 +105,7 @@
 		</section>
 		<section class="col-lg-4">
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="clima">
 					<p class="titulos">Reporte Agro-climatico</p>
 					<img src="./img/botonrepagri.jpg" alt="Estadisticas" class="img-responsive center-block">
 				</div>
@@ -198,5 +198,11 @@
 				$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
 			}
 		});
-	});
+	
+    
+    $('#clima')
+            .html('<object data=http://www.inameh.gob.ve/web/>');
+            
+    
+    });
 </script>
