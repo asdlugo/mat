@@ -94,9 +94,7 @@ p#menu-toggle {
     padding: 0;
     list-style: none;
 }
-/*ul.sidebar-nav li ul li{
-	text-indent: 50px;
-}*/
+
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -276,3 +274,8 @@ p#menu-toggle {
 .carousel-control.right {
     right: -12px;
 }
+
+/*video {
+    width:100%;
+    max-width:327px;
+}*/

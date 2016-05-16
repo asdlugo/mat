@@ -1,0 +1,22 @@
+<p class="titulos">Videos</p>
+<div id="coverflow">
+</div>
+
+<script>
+$.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/videos/1", function( data ) {
+  var items = [];
+  //data = JSON.parse(data);
+  /*$.each( data, function( key, val ) {
+  	console.log(val);
+    if (key=='ruta')items.push( "<li id=" + key + "><video src=" + val + "controls></video>" +  + "</li>");
+  });
+ */
+  items.push("<li><video controls src=../../sitio/web/imagenes/"+data[0].ruta+"></video></li>");
+  $( "<ul/>", {
+    html: items.join( "" )
+  }).appendTo("div#coverflow");
+
+  var coverflow = $("#coverflow").flipster();
+});
+
+</script>

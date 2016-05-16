@@ -51,67 +51,19 @@
 					<img src="./img/botononinter.jpg" alt="Estadisticas" class="img-responsive center-block">
 				</div>
 				<div class="col-lg-6 col-sm-6 col-xs-12">
-					<p class="titulos">Videos</p>
-					<article id="demo-carousel" class="demo">
-						<div id="carousel">
-							<ul class="flip-items">
-								<li data-flip-title="Red">
-									<img src="./img2/text1.png">
-								</li>
-								<li data-flip-title="Razzmatazz" data-flip-category="Purples">
-									<img src="./img2/text2.png">
-								</li>
-								<li data-flip-title="Deep Lilac" data-flip-category="Purples">
-									<img src="./img2/text3.png">
-								</li>
-								<li data-flip-title="Daisy Bush" data-flip-category="Purples">
-									<img src="./img2/text4.png">
-								</li>
-								<li data-flip-title="Cerulean Blue" data-flip-category="Blues">
-									<img src="./img2/text5.png">
-								</li>
-								<li data-flip-title="Dodger Blue" data-flip-category="Blues">
-									<img src="./img2/text6.png">
-								</li>
-								<li data-flip-title="Cyan" data-flip-category="Blues">
-									<img src="./img2/text7.png">
-								</li>
-								<li data-flip-title="Robin's Egg" data-flip-category="Blues">
-									<img src="./img2/text8.png">
-								</li>
-								<li data-flip-title="Deep Sea" data-flip-category="Greens">
-									<img src="./img2/text9.png">
-								</li>
-								<li data-flip-title="Apple" data-flip-category="Greens">
-									<img src="./img2/text10.png">
-								</li>
-								<li data-flip-title="Pistachio" data-flip-category="Greens">
-									<img src="./img2/text11.png">
-								</li>
-								<li data-flip-title="Pear" data-flip-category="Greens">
-									<img src="./img2/text12.png">
-								</li>
-								<li data-flip-title="Bright Sun" data-flip-category="Yellows">
-									<img src="./img2/text13.png">
-								</li>
-								<li data-flip-title="Mikado" data-flip-category="Yellows">
-									<img src="./img2/text14.png">
-								</li>
-							</ul>
-						</div>
-					</article>
+					<carrusel></carrusel>
 				</div>
 			</div>
 		</section>
 		<section class="col-lg-4">
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="clima">
+				<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12" <!--id="clima"-->
 					<p class="titulos">Reporte Agro-climatico</p>
 					<img src="./img/botonrepagri.jpg" alt="Estadisticas" class="img-responsive center-block">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
 					<p class="titulos">Contacto ABAE</p>
 					<form role="form">
 						<div class="form-group">
@@ -131,10 +83,10 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<!--div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<p class="titulos">twitter</p>
 					<a class="twitter-grid" data-limit="1" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
+				</div-->
 			</div>
 		</section>
 	</div>
@@ -156,9 +108,9 @@
 				</div>
 			</div>
 		</div>
-		<footer></footer>
 	</section>
 </div>
+<footer></footer>
 </div>
 
 
@@ -173,12 +125,7 @@
 	});
 
 </script>
-<script>
-	var carousel = $("#carousel").flipster({
-		style: 'carousel',
-		spacing: -0.5,
-	});
-</script>
+
 <script>
 	$(document).ready(function () {
 		$('#myCarousel').carousel({

@@ -50,7 +50,13 @@ app.directive('content', function() {
   }
 });
 
+app.directive('carrusel', function() {
+  return {
+    restrict: 'E',
+    templateUrl: './partials/carrusel.html',
 
+  }
+});
 
 
 
