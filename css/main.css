@@ -7,15 +7,18 @@ and open the template in the editor.
     Created on : 07/04/2016, 09:48:32 AM
     Author     : karolynar
 */
-.fondo{
-    background: rgba(150,237,180,0.83);
+.fondo {
+    background: #036417;
+    margin: 10px;
+    padding: 1px;
+    /*background: rgba(150,237,180,0.83);
     background: -moz-linear-gradient(top, rgba(150,237,180,0.83) 0%, rgba(150,237,180,0.61) 34%, rgba(150,237,180,0.61) 44%, rgba(6,120,10,0.61) 84%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(150,237,180,0.83)), color-stop(34%, rgba(150,237,180,0.61)), color-stop(44%, rgba(150,237,180,0.61)), color-stop(84%, rgba(6,120,10,0.61)));
     background: -webkit-linear-gradient(top, rgba(150,237,180,0.83) 0%, rgba(150,237,180,0.61) 34%, rgba(150,237,180,0.61) 44%, rgba(6,120,10,0.61) 84%);
-    background: -o-linear-gradient(top, rgba(150,237,180,0.83) 0%, rgba(150,237,180,0.61) 34%, rgba(150,237,180,0.61) 44%, rgba(6,120,10,0.61) 84%);
+    background: -o-linear-gradient(top, rgba(150,237,180,0.83) 0%, rgba(150,237,180,0.61) 34%, rgba(150,237,180,0.61) 44%, rgba(6,120,10,0.61) 84%);*/
 }
 
-ul.listado{
+ul.listado {
     margin-left: 0;
     margin-right: 10px;
     list-style-type: none;

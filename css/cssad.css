@@ -230,9 +230,9 @@ p#menu-toggle {
     z-index: 3;   
 }
 .sidebar-icon{
-    width: 156px;
+    width: 126px;
     height: 25px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 .sidebar-icon img{
     max-height: 100%;
@@ -275,7 +275,7 @@ p#menu-toggle {
     right: -12px;
 }
 
-/*video {
-    width:100%;
-    max-width:327px;
-}*/
+video {
+    width: 327px;
+    max-width:100%;
+}

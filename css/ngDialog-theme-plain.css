@@ -28,7 +28,8 @@
 .ngdialog.ngdialog-theme-plain .ngdialog-content p,
 .ngdialog.ngdialog-theme-plain .ngdialog-content ul,
 .ngdialog.ngdialog-theme-plain .ngdialog-content li {
-  color: inherit;
+  color: #fff;
+  text-align: justify;
 }
 
 .ngdialog.ngdialog-theme-plain .ngdialog-close {
