@@ -9,7 +9,7 @@ $(document).ready(function(){
 /*
  *Carrusel de Videos
  */
-  $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/videos/all", function( data ) {
+  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/videos/all", function( data ) {
     var items = [];
     $.each( data, function( key, val ) {
       if (key==key){
