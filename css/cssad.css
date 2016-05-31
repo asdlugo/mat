@@ -1,4 +1,8 @@
-/*header*/
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+/********************************header**********************/
 
 .menu {
     background-image: url(../img/header3.png);
@@ -39,6 +43,8 @@ p#menu-toggle {
     padding: 0;
 }
 
+
+/*******************************sidebar****************************/
 /* Toggle Styles */
 
 #wrapper {
@@ -241,6 +247,23 @@ p#menu-toggle {
     margin-left: 7px;
 }
 
+div.twitter {
+    margin-top: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: skyblue;
+    
+}
+
+
+
+
+
+
+
+
+
+/*******************************contenido de la pagina ****************************/
 .titulos{
 	color: #056839;
 	margin-top: 10px;
@@ -276,6 +299,6 @@ p#menu-toggle {
 }
 
 video {
-    width: 327px;
+    width: auto;
     max-width:100%;
 }

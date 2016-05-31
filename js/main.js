@@ -1,10 +1,25 @@
-/**
-Toogle Wrapper
-*/
 $(document).ready(function(){
+/*
+ *Toogle Wrapper
+ */
   $("span#menu-toggle").on('click',function(e) {
     e.preventDefault();
     $("div#wrapper").toggleClass("toggled");
+  });
+/*
+ *Carrusel de Videos
+ */
+  $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/videos/all", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      if (key==key){
+        items.push("<li><video controls src=../../sitio/web/imagenes/"+val.ruta+"></video></li>");
+      }
+    });
+    $( "<ul/>", {
+      html: items.join( "" )
+    }).appendTo("div#coverflow");
+    var coverflow = $("#coverflow").flipster();
   });
 });
 
