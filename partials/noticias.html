@@ -1,13 +1,35 @@
 <div id="noticia" class="fondo">
-	<p>Noticias</p>
+	
+</div>
+<div class="paginador">
+	 
 </div>
 <img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
+
+
+<section class="paginacion">
+	<ul>
+    <li><a class="homepag" href="#">|<<</a></li>
+		<li><a class="repag""  href="#"><</a></li>
+		<li><a class="numero 1 active" id=1 href="#">1</a></li>
+		<li><a class="numero 2" id=2 href="#">2</a></li>
+		<li><a class="numero 3" id=3 href="#">3</a></li>
+		<li><a class="numero 4" id=4 href="#">4</a></li>
+		<li><a class="numero 5" id=5 href="#">5</a></li>
+		<li><a class="avpag" href="#">></a></li>
+    <li><a class="endpag" href="#">>>|</a></li>
+	</ul>
+</section>
+
 <script>
+
+
+
+
 $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function( data ) {
- // alert(JSON.parse(data[0]))
   var items = [];
-  $.each( data[0], function( key, val ) {
-    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
+  $.each( data, function( key, val ) {
+    if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
   });
  
   $( "<ul/>", {
@@ -16,4 +38,74 @@ $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function
   }).appendTo( "div#noticia" );
 });
 
+$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
+  
+
+  //$( ".result" ).html( data );
+  alert( "Load was performed."+data );
+
+
+//click en pagina
+$('a.numero').click(function(){
+
+  alert($(this).attr('id'));
+});
+
+//click en avpag
+$('a.avpag').click(function(){
+  var val1=$('a.1').attr('id');
+  var val2=$('a.2').attr('id');
+  var val3=$('a.3').attr('id');
+  var val4=$('a.4').attr('id');
+  var val5=$('a.5').attr('id');
+  if (val5<data) {
+  val1= parseInt(val1)+5;
+  val2= parseInt(val2)+5;
+  val3= parseInt(val3)+5;
+  val4= parseInt(val4)+5;
+  val5= parseInt(val5)+5;
+  }
+  $('a.1').html(val1);
+  $('a.1').attr('id',val1);
+ $('a.2').html(val2);
+  $('a.2').attr('id',val2);
+ $('a.3').html(val3);
+  $('a.3').attr('id',val3);
+ $('a.4').html(val4);
+  $('a.4').attr('id',val4);
+ $('a.5').html(val5);
+  $('a.5').attr('id',val5);  
+})
+
+//retroceder
+$('a.repag').click(function(){
+  var val1=$('a.1').attr('id');
+  var val2=$('a.2').attr('id');
+  var val3=$('a.3').attr('id');
+  var val4=$('a.4').attr('id');
+  var val5=$('a.5').attr('id');
+  if (val1>5) {
+  val1= parseInt(val1)-5;
+  val2= parseInt(val2)-5;
+  val3= parseInt(val3)-5;
+  val4= parseInt(val4)-5;
+  val5= parseInt(val5)-5;
+}
+  $('a.1').html(val1);
+  $('a.1').attr('id',val1);
+ $('a.2').html(val2);
+  $('a.2').attr('id',val2);
+ $('a.3').html(val3);
+  $('a.3').attr('id',val3);
+ $('a.4').html(val4);
+  $('a.4').attr('id',val4);
+ $('a.5').html(val5);
+  $('a.5').attr('id',val5);  
+})
+
+$('a.homepag').click(function(){
+  
+})
+
+});
 </script>
