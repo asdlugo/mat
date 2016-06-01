@@ -1,3 +1,19 @@
-<div>
+<div id="noticia" class="fondo">
 	<p>Noticias</p>
 </div>
+<img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
+<script>
+$.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function( data ) {
+ // alert(JSON.parse(data[0]))
+  var items = [];
+  $.each( data[0], function( key, val ) {
+    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "listado",
+    html: items.join( "" )
+  }).appendTo( "div#noticia" );
+});
+
+</script>
