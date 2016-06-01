@@ -11,7 +11,7 @@
 	<ul>
     <li><a class="homepag" href="#">|<<</a></li>
 		<li><a class="repag""  href="#"><</a></li>
-		<li><a class="numero 1 active" id=1 href="#">1</a></li>
+		<li><a class="numero 1" id=1 href="#">1</a></li>
 		<li><a class="numero 2" id=2 href="#">2</a></li>
 		<li><a class="numero 3" id=3 href="#">3</a></li>
 		<li><a class="numero 4" id=4 href="#">4</a></li>
@@ -26,7 +26,17 @@
 
 
 
-$.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function( data ) {
+
+
+$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
+  
+  var indice=($(this).attr('id'));
+  indice=indice-1;
+  //alert(indice);
+//click en pagina
+$('a.numero').click(function(){
+  $('div#noticia').empty();
+  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/"+indice, function( data ) {
   var items = [];
   $.each( data, function( key, val ) {
     if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
@@ -38,17 +48,6 @@ $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function
   }).appendTo( "div#noticia" );
 });
 
-$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
-  
-
-  //$( ".result" ).html( data );
-  //alert( "Load was performed. "+data );
-
-
-//click en pagina
-$('a.numero').click(function(){
-
-  //alert($(this).attr('id'));
 });
 
 //click en avpag
@@ -77,7 +76,7 @@ $('a.avpag').click(function(){
   $('a.5').attr('id',val5);  
 })
 
-//retroceder
+//click en repag
 $('a.repag').click(function(){
   var val1=$('a.1').attr('id');
   var val2=$('a.2').attr('id');
@@ -103,9 +102,7 @@ $('a.repag').click(function(){
   $('a.5').attr('id',val5);  
 })
 
-$('a.homepag').click(function(){
-  
-})
+
 
 });
 </script>
