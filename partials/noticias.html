@@ -10,7 +10,7 @@
 <section class="paginacion">
 	<ul>
     <li><a class="homepag" href="#">|<<</a></li>
-		<li><a class="repag""  href="#"><</a></li>
+		<li><a class="repag"  href="#"><</a></li>
 		<li><a class="numero 1" id=1 href="#">1</a></li>
 		<li><a class="numero 2" id=2 href="#">2</a></li>
 		<li><a class="numero 3" id=3 href="#">3</a></li>
@@ -30,11 +30,12 @@
 
 $.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
   
-  var indice=($(this).attr('id'));
-  indice=indice-1;
   //alert(indice);
 //click en pagina
 $('a.numero').click(function(){
+  var indice=($(this).attr('id'));
+  indice=parseInt(indice)-1;
+  
   $('div#noticia').empty();
   $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/"+indice, function( data ) {
   var items = [];
