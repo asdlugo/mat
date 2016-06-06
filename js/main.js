@@ -21,6 +21,15 @@ $(document).ready(function(){
     }).appendTo("div#coverflow");
     var coverflow = $("#coverflow").flipster();
   });
+
+  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/banners/0", function( data ) {
+    var item =[];
+    $.each(data, function( key, val ){
+    console.log(val);
+    $("header.menu").css('background-image', 'url(http://192.168.2.203/sitio/web/imagenes/'+ val.ruta_banner+')')
+      
+    })
+  });
 });
 
 
@@ -31,7 +40,7 @@ $(document).ready(function(){
 var app = angular.module('matApp', ['ngRoute', 'ngDialog']);
 
 /**
- * Modal box sidebar
+ * Modal box
  */
 app.directive('sidebar', function(ngDialog) {
   return {

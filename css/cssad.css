@@ -1,11 +1,11 @@
-*{
+* {
     font-family: 'Roboto', sans-serif;
 }
 
 /********************************header**********************/
 
 .menu {
-    background-image: url(../img/header3.png);
+    
     min-height: 153px;
     background-repeat: no-repeat;
 }
