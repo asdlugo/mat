@@ -23,24 +23,44 @@
 
 <script>
 
+/****cargar ultima noticia al comienzo******/
 
+$(document).ready(function(){
+    
+$.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/0", function( datos ) {
+  var items = [];
+  $.each( datos, function( key, val ) {
+    if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
+    
+  });
+ 
+  $( "<ul/>", {
+    "class": "listado",
+    html: items.join( "" )
+  }).appendTo( "div#noticia" );
+});    
+});
+
+
+//*******************************************
 
 
 
 
 $.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
-  
-  //alert(indice);
+        //
 //click en pagina
 $('a.numero').click(function(){
   var indice=($(this).attr('id'));
   indice=parseInt(indice)-1;
   
   $('div#noticia').empty();
-  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/"+indice, function( data ) {
+  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/"+indice, function( datos ) {
   var items = [];
-  $.each( data, function( key, val ) {
-    if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
+  $.each( datos, function( key, val ) {
+    if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
+    
+    
   });
  
   $( "<ul/>", {
@@ -103,7 +123,8 @@ $('a.repag').click(function(){
   $('a.5').attr('id',val5);  
 })
 
+ 
 
-
+  
 });
 </script>
