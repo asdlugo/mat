@@ -27,7 +27,7 @@
 
 $(document).ready(function(){
     
-$.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/0", function( datos ) {
+$.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0", function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
     if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
@@ -47,7 +47,7 @@ $.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/0", function( da
 
 
 
-$.get( "http://localhost/sitio/web/app_dev.php/api/countnoticia", function( data ) {
+$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
         //
 //click en pagina
 $('a.numero').click(function(){
@@ -55,7 +55,7 @@ $('a.numero').click(function(){
   indice=parseInt(indice)-1;
   
   $('div#noticia').empty();
-  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/"+indice, function( datos ) {
+  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/"+indice, function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
     if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");

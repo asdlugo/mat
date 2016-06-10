@@ -26,7 +26,7 @@ $(document).ready(function(){
   });
   
   /**traer Banner**/
-  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/banners/0", function( data ) {
+  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/banners/0", function( data ) {
       var item = [];
     $.each(data, function( key , val ){
     $("header.menu").css('background-image', 'url(http://localhost/sitio/web/imagenes/'+ val.ruta_banner+')');
