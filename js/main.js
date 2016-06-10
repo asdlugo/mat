@@ -1,18 +1,21 @@
 $(document).ready(function(){
+
 /*
  *Toogle Wrapper
  */
   $("span#menu-toggle").on('click',function(e) {
     e.preventDefault();
     $("div#wrapper").toggleClass("toggled");
+    
   });
 /*
  *Carrusel de Videos
  */
   $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/videos/all", function( data ) {
-    var items = [];
+      console.log( "data" );
+      var items = [];
     $.each( data, function( key, val ) {
-      if (key==key){
+      if (key===key){
         items.push("<li><video controls src=../../sitio/web/imagenes/"+val.ruta+"></video></li>");
       }
     });
@@ -21,15 +24,15 @@ $(document).ready(function(){
     }).appendTo("div#coverflow");
     var coverflow = $("#coverflow").flipster();
   });
-
-  $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/banners/0", function( data ) {
-    var item =[];
-    $.each(data, function( key, val ){
-    console.log(val);
-    $("header.menu").css('background-image', 'url(http://192.168.2.203/sitio/web/imagenes/'+ val.ruta_banner+')')
-      
-    })
+  
+  /**traer Banner**/
+  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/banners/0", function( data ) {
+      var item = [];
+    $.each(data, function( key , val ){
+    $("header.menu").css('background-image', 'url(http://localhost/sitio/web/imagenes/'+ val.ruta_banner+')');
+    });
   });
+  
 });
 
 

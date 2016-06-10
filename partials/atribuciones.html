@@ -1,4 +1,4 @@
-<div id="mision" class="fondo">
+<div id="atribuciones" class="fondo">
   
 </div>
 <img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
@@ -6,17 +6,16 @@
 
 
 <script>
-$.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/informacions/0", function( data ) {
- // alert(JSON.parse(data[0]))
-  var items = [];
-  $.each( data[0], function( key, val ) {
-    if (key=='descripcion')items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "listado",
-    html: items.join( "" )
-  }).appendTo( "div#mision" );
+$.getJSON( "http://localhost/sitio/web/app_dev.php/api/informacions/1", function( data ) {
+    var items = [];
+    $.each( data , function( key, val ) {
+        console.log(key);
+        if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
+    });
+    $( "<ul/>", {
+        "class": "listado",
+        html: items.join( "" )
+    }).appendTo( "div#atribuciones" );
 });
 
 </script>

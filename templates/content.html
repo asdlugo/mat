@@ -112,40 +112,38 @@
 	</section>
 	<footer></footer>
 </div>
-</div>
 
 
 
 <script  type="text/javascript" charset="utf-8" >
 
 	$(document).ready(function(){
-		$("p#menu-toggle").on('click',function(e) {
-			e.preventDefault();
-			$("div#wrapper").toggleClass("toggled");
-		});
+            $("p#menu-toggle").on('click',function(e) {
+                    e.preventDefault();
+                    $("div#wrapper").toggleClass("toggled");
+            });
 	});
 
 </script>
 
 <script>
-	$(document).ready(function () {
-		$('#myCarousel').carousel({
-			interval: 10000
-		})
-		$('.fdi-Carousel .item').each(function () {
-			var next = $(this).next();
-			if (!next.length) {
-				next = $(this).siblings(':first');
-			}
-			next.children(':first-child').clone().appendTo($(this));
-
-			if (next.next().length > 0) {
-				next.next().children(':first-child').clone().appendTo($(this));
-			}
-			else {
-				$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-			}
-		}); 
-    
+$(document).ready(function () {
+    $('#myCarousel').carousel({
+        interval: 10000
     });
+    $('.fdi-Carousel .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+                next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        if (next.next().length > 0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+        }
+        else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
+    });     
+});
 </script>

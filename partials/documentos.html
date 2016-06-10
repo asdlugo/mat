@@ -10,7 +10,8 @@ $.getJSON( "http://localhost/sitio/web/app_dev.php/api/documentos/all", function
  // alert(JSON.parse(data[0]))
   var items = [];
   $.each( data[0], function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
+      console.log(key, val);
+    items.push( "<li id='" + val.id + "'><a href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
   });
  
   $( "<ul/>", {

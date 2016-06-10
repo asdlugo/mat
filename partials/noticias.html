@@ -47,7 +47,7 @@ $.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/0", function( da
 
 
 
-$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticia", function( data ) {
+$.get( "http://localhost/sitio/web/app_dev.php/api/countnoticia", function( data ) {
         //
 //click en pagina
 $('a.numero').click(function(){
@@ -58,7 +58,7 @@ $('a.numero').click(function(){
   $.getJSON( "http://localhost/sitio/web/app_dev.php/api/noticias/"+indice, function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
-    if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
+    if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
     
     
   });
@@ -95,36 +95,32 @@ $('a.avpag').click(function(){
   $('a.4').attr('id',val4);
  $('a.5').html(val5);
   $('a.5').attr('id',val5);  
-})
+});
 
 //click en repag
 $('a.repag').click(function(){
-  var val1=$('a.1').attr('id');
-  var val2=$('a.2').attr('id');
-  var val3=$('a.3').attr('id');
-  var val4=$('a.4').attr('id');
-  var val5=$('a.5').attr('id');
-  if (val1>5) {
-  val1= parseInt(val1)-5;
-  val2= parseInt(val2)-5;
-  val3= parseInt(val3)-5;
-  val4= parseInt(val4)-5;
-  val5= parseInt(val5)-5;
-}
-  $('a.1').html(val1);
-  $('a.1').attr('id',val1);
- $('a.2').html(val2);
-  $('a.2').attr('id',val2);
- $('a.3').html(val3);
-  $('a.3').attr('id',val3);
- $('a.4').html(val4);
-  $('a.4').attr('id',val4);
- $('a.5').html(val5);
-  $('a.5').attr('id',val5);  
-})
-
- 
-
-  
+    var val1=$('a.1').attr('id');
+    var val2=$('a.2').attr('id');
+    var val3=$('a.3').attr('id');
+    var val4=$('a.4').attr('id');
+    var val5=$('a.5').attr('id');
+    if (val1>5) {
+        val1= parseInt(val1)-5;
+        val2= parseInt(val2)-5;
+        val3= parseInt(val3)-5;
+        val4= parseInt(val4)-5;
+        val5= parseInt(val5)-5;
+    }
+        $('a.1').html(val1);
+        $('a.1').attr('id',val1);
+        $('a.2').html(val2);
+        $('a.2').attr('id',val2);
+        $('a.3').html(val3);
+        $('a.3').attr('id',val3);
+        $('a.4').html(val4);
+        $('a.4').attr('id',val4);
+        $('a.5').html(val5);
+        $('a.5').attr('id',val5);  
+    });
 });
 </script>

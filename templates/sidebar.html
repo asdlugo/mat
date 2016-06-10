@@ -1,63 +1,60 @@
 <div id="sidebar-wrapper">
-	<img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
-	<ul class="sidebar-nav">
-		<li>
-			<a href="#">Inicio</a>
-		</li>
-		<li>
-			<a href="#">El Ministerio</a>
-			<ul>
-				<li ng-click="openDialog('quienes_somos')"><a href="#">Quiénes Somos</a></li>
-				<!--li ng-click="openDialog('mision')"><a href="#">Misión</a></li>
-				<li ng-click="openDialog('vision')"><a href="#">Visión</a></li>
-				<li ng-click="openDialog('objetivos_estrategicos')"><a href="#">Objetivos Estratégicos</a></li>
-				<li ng-click="openDialog('competencias_generales')"><a href="#">Competencias Generales</a></li-->
-				<li ng-click="openDialog('atribuciones')"><a href="#">Atribuciones MAT</a></li>
-				<li ng-click="openDialog('')"><a href="#">Directorio y Organigrama</a></li>
-				<li ng-click="openDialog('')"><a href="#">Unidades Estadales</a></li>
-				<li ng-click="openDialog('')"><a href="#">Entes Adscritas</a></li>
-				<li ng-click="openDialog('')"><a href="#">Organismos Adscritas</a></li>
-				<li ng-click="openDialog('')"><a href="#">Legislación Agraria</a></li>
-				<li ng-click="openDialog('')"><a href="#">Convenios Internacionales</a></li>
-				<li ng-click="openDialog('')"><a href="#">Galerías</a></li>
-				<li ng-click="openDialog('')"><a href="#">Himnos</a></li>
-				<li ng-click="openDialog('')"><a href="#">Contrataciones Públicas</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="#" ng-click="openDialog('conglomerados')">Conglomerados</a>
-		</li>
-		<li>
-			<a href="#">Servicios</a>
-			<ul>
-				<li><a target="blank" href="http://www.mat.gob.ve/sistemas/recibopago/paginas/validacion_constancias_trabajo.php">Constancias de Trabajo</a></li>
-				<li><a target="blank" href="http://runoppa.mat.gob.ve/">RUNOPPA</a></li>
-				<li><a target="blank" href="http://www.mat.gob.ve/sistemas/recibopago/">Recibo de Pago</a></li>
-				<li><a target="blank" href="https://correo.mat.gob.ve">Correo Institucional</a></li>
-				<!--li><a target="blank" href="http://www.agropatria.com.ve/">Artículos en Agropatria</a></li-->
-			</ul>
-		</li>
-		<li>
-			<a href="#" ng-click="openDialog('descargas')">Documentos</a>
-		</li>
-	</ul>
+    <img src="./img/cintillopeque.jpg" alt="Estadisticas" class="img-responsive">
+    <ul class="sidebar-nav">
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">El Ministerio</a>
+                <ul>
+                    <li ng-click="openDialog('quienes_somos')"><a href="#">Quiénes Somos</a></li>
+                    <!--li ng-click="openDialog('mision')"><a href="#">Misión</a></li>
+                    <li ng-click="openDialog('vision')"><a href="#">Visión</a></li>
+                    <li ng-click="openDialog('objetivos_estrategicos')"><a href="#">Objetivos Estratégicos</a></li>
+                    <li ng-click="openDialog('competencias_generales')"><a href="#">Competencias Generales</a></li-->
+                    <li ng-click="openDialog('atribuciones')"><a href="#">Atribuciones MAT</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Directorio y Organigrama</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Unidades Estadales</a></li>
+                    <li ng-click="openDialog('entes')"><a href="#">Entes Adscritos</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Organismos Adscritas</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Legislación Agraria</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Convenios Internacionales</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Galerías</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Himnos</a></li>
+                    <li ng-click="openDialog('')"><a href="#">Contrataciones Públicas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" ng-click="openDialog('conglomerados')">Conglomerados</a>
+            </li>
+            <li>
+                <a href="#">Servicios</a>
+                <ul>
+                        <li><a target="blank" href="http://www.mat.gob.ve/sistemas/recibopago/paginas/validacion_constancias_trabajo.php">Constancias de Trabajo</a></li>
+                        <li><a target="blank" href="http://runoppa.mat.gob.ve/">RUNOPPA</a></li>
+                        <li><a target="blank" href="http://www.mat.gob.ve/sistemas/recibopago/">Recibo de Pago</a></li>
+                        <li><a target="blank" href="https://correo.mat.gob.ve">Correo Institucional</a></li>
+                        <!--li><a target="blank" href="http://www.agropatria.com.ve/">Artículos en Agropatria</a></li-->
+                </ul>
+            </li>
+            <li>
+                <a href="#" ng-click="openDialog('documentos')">Documentos</a>
+            </li>
+    </ul>
 
-	<div id="custom-search-input">
-		<div class="input-group col-md-12">
-			<input type="text" class="  search-query form-control" placeholder="Buscar" />
-			<span class="input-group-btn">
-				<button class="btn btn-danger" type="button">
-					<span class=" glyphicon glyphicon-search"></span>
-				</button>
-			</span>
-		</div>
-	</div>
-	<div class="sidebar-icon">
-		<img src="./img/bt.png" alt="twitter" class="img-responsive">
-		<img src="./img/bfb.png" alt="facebook" class="img-responsive">
-		<img src="./img/byt.png" alt="youtube" class="img-responsive">
-	</div>
-	<!--div class="twitter">
-		<a class="twitter-grid" data-limit="1" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park Tweets</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-	</div-->
+    <div id="custom-search-input">
+            <div class="input-group col-md-12">
+                    <input type="text" class="  search-query form-control" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button">
+                                    <span class=" glyphicon glyphicon-search"></span>
+                            </button>
+                    </span>
+            </div>
+    </div>
+    <div class="sidebar-icon">
+            <img src="./img/bt.png" alt="twitter" class="img-responsive">
+            <img src="./img/bfb.png" alt="facebook" class="img-responsive">
+            <img src="./img/byt.png" alt="youtube" class="img-responsive">
+    </div>
 </div>

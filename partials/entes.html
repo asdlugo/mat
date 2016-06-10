@@ -1,0 +1,20 @@
+<div id="entes" class="fondo">
+  
+</div>
+<img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
+
+
+
+<script>
+$.getJSON( "http://localhost/sitio/web/app_dev.php/api/entes/all", function( data ) {
+    var items = [];
+    $.each( data , function( key, val ) {
+        if (key===key)items.push( "<li id='" + key + "'><a href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
+    });
+    $( "<ul/>", {
+        "class": "listado",
+        html: items.join( "" )
+    }).appendTo( "div#entes" );
+});
+
+</script>
