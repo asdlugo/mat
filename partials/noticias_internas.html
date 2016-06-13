@@ -25,7 +25,7 @@
 
 $(document).ready(function(){
     
-    $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/0/interna", function( datos ) {
+    $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/noticias/0/interna", function( datos ) {
       var items = [];
       $.each( datos, function( key, val ) {
         if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
@@ -41,7 +41,7 @@ $(document).ready(function(){
     
     
     
-$.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticiainterna", function( data ) {
+$.get( "http://127.0.0.1/sitio/web/app_dev.php/api/countnoticiainterna", function( data ) {
   
   //alert(indice);
   //click en pagina
@@ -50,7 +50,7 @@ $.get( "http://192.168.2.203/sitio/web/app_dev.php/api/countnoticiainterna", fun
     indice=parseInt(indice)-1;
     
     $('div#noticiaint').empty();
-    $.getJSON( "http://192.168.2.203/sitio/web/app_dev.php/api/noticias/"+indice+"/interna", function( data ) {
+    $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/noticias/"+indice+"/interna", function( data ) {
     var items = [];
     $.each( data, function( key, val ) {
       if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
