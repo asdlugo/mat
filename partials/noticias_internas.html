@@ -25,7 +25,7 @@
 
 $(document).ready(function(){
     
-    $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/noticias/0/interna", function( datos ) {
+    $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/noticias/0/interna", function( datos ) {
       var items = [];
       $.each( datos, function( key, val ) {
         if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
@@ -41,7 +41,7 @@ $(document).ready(function(){
     
     
     
-$.get( "http://127.0.0.1/sitio/web/app_dev.php/api/countnoticiainterna", function( data ) {
+$.get( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/countnoticiainterna", function( data ) {
   
   //alert(indice);
   //click en pagina
@@ -50,7 +50,7 @@ $.get( "http://127.0.0.1/sitio/web/app_dev.php/api/countnoticiainterna", functio
     indice=parseInt(indice)-1;
     
     $('div#noticiaint').empty();
-    $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/noticias/"+indice+"/interna", function( data ) {
+    $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/noticias/"+indice+"/interna", function( data ) {
     var items = [];
     $.each( data, function( key, val ) {
       if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>" );
@@ -86,7 +86,7 @@ $.get( "http://127.0.0.1/sitio/web/app_dev.php/api/countnoticiainterna", functio
    $('a.4').html(val4);
     $('a.4').attr('id',val4);
    $('a.5').html(val5);
-    $('a.5').attr('id',val5);  
+    $('a.5').attr('id',val5);
   });
 
 //click en repag
@@ -112,7 +112,7 @@ $.get( "http://127.0.0.1/sitio/web/app_dev.php/api/countnoticiainterna", functio
    $('a.4').html(val4);
     $('a.4').attr('id',val4);
    $('a.5').html(val5);
-    $('a.5').attr('id',val5);  
+    $('a.5').attr('id',val5);
   });
 
 

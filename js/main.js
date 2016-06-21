@@ -6,12 +6,12 @@ $(document).ready(function(){
   $("span#menu-toggle").on('click',function(e) {
     e.preventDefault();
     $("div#wrapper").toggleClass("toggled");
-    
+
   });
 /*
  *Carrusel de Videos
  */
-  $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/videos/all", function( data ) {
+  $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/videos/all", function( data ) {
       console.log( "data" );
       var items = [];
     $.each( data, function( key, val ) {
@@ -24,15 +24,13 @@ $(document).ready(function(){
     }).appendTo("div#coverflow");
     var coverflow = $("#coverflow").flipster();
   });
-  
   /**traer Banner**/
-  $.getJSON( "http://127.0.0.1/sitio/web/app_dev.php/api/banners/0", function( data ) {
+  $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/banners/0", function( data ) {
       var item = [];
     $.each(data, function( key , val ){
     $("header.menu").css('background-image', 'url(http://localhost/sitio/web/imagenes/'+ val.ruta_banner+')');
     });
   });
-  
 });
 
 
