@@ -28,7 +28,7 @@ $(document).ready(function(){
   $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/banners/0", function( data ) {
       var item = [];
     $.each(data, function( key , val ){
-    $("header.menu").css('background-image', 'url(http://localhost/sitio/web/imagenes/'+ val.ruta_banner+')');
+    $("header.menu").css('background-image', 'url(http://noticias.agriculturaproductiva.gob.ve/imagenes/'+ val.ruta_banner+')');
     });
   });
 });
