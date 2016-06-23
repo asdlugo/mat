@@ -16,7 +16,7 @@ $(document).ready(function(){
       var items = [];
     $.each( data, function( key, val ) {
       if (key===key){
-        items.push("<li><video controls src=../../sitio/web/imagenes/"+val.ruta+"></video></li>");
+        items.push("<li><video controls src=http://noticias.agriculturaproductiva.gob.ve/upload/"+val.ruta+"></video></li>");
       }
     });
     $( "<ul/>", {
