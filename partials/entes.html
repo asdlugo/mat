@@ -9,7 +9,7 @@
 $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/entes/all", function( data ) {
     var items = [];
     $.each( data , function( key, val ) {
-        if (key===key)items.push( "<li id='" + key + "'><a href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
+        if (key===key)items.push( "<li id='" + key + "'><a target=blank href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
     });
     $( "<ul/>", {
         "class": "listado",
