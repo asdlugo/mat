@@ -8,30 +8,35 @@
     min-height: 153px;
     background-repeat: no-repeat;
 }
-.sbar{
+
+.sbar {
     position: absolute;
     width: 100%;
-    margin-top: 121px; 
+    margin-top: 121px;
 }
 
-.menu-icon{
+.menu-icon {
     float: right;
 }
-.menu-icon > img{
+
+.menu-icon > img {
     max-height: 25px;
     margin: 3px;
 
 }
-.barra{
+
+.barra {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 2px;
     margin-bottom: 0px;
     position: relative;
 }
-.boton{
-    color: #fff;
+
+.boton {
+    color: #045B32;
 
 }
+
 .barra > p {
     max-width: 100px;
     font-size: 20px;
@@ -137,11 +142,19 @@ p#menu-toggle {
 	-webkit-transition:1s;
 }
 
-.sidebar-nav li:hover ul {
-    height:160px;
+.sidebar-nav li:hover ul#servicio {
+    height:120px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+}
+
+.sidebar-nav li:hover ul#ministerio {
+    height:560px;
     overflow-y:auto;
     overflow-x:hidden;
 }
+
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
@@ -191,7 +204,6 @@ p#menu-toggle {
 }
 
 
-
 /* buscador */
 #custom-search-input {
     margin:0;
@@ -201,7 +213,7 @@ p#menu-toggle {
     margin-top: 20px;
     margin-bottom: 20px;
 }
- 
+
 #custom-search-input .search-query {
     padding-right: 3px;
     padding-right: 4px \9;
@@ -232,18 +244,22 @@ p#menu-toggle {
 }
 
 .search-query:focus + button {
-    z-index: 3;   
+    z-index: 3;
+
 }
-.sidebar-icon{
+.sidebar-icon {
     width: 126px;
     height: 25px;
     margin-left: 40px;
+
 }
-.sidebar-icon img{
+
+.sidebar-icon img {
     max-height: 100%;
     float: left;
     margin-right: 7px;
     margin-left: 7px;
+
 }
 
 div.twitter {
@@ -251,19 +267,12 @@ div.twitter {
     width: 100%;
     height: 200px;
     background-color: skyblue;
-    
+
 }
 
 
-
-
-
-
-
-
-
 /*******************************contenido de la pagina ****************************/
-.titulos{
+.titulos {
 	color: #056839;
 	margin-top: 10px;
 	margin-bottom: 5px;
@@ -276,6 +285,7 @@ div.twitter {
 #enviar {
     margin-top: 5px;
     margin-right: 0px;
+
 }
 
 .carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
@@ -292,14 +302,17 @@ div.twitter {
     border: 4px solid #FFFFFF;
     border-radius: 23px 23px 23px 23px;
     margin-top: 195px;
+
 }
 .carousel-control.right {
     right: -12px;
+
 }
 
 video {
     width: 0 auto;
     max-width:100%;
+
 }
 
 /************************paginador************************/
@@ -307,30 +320,52 @@ video {
     margin:20px;
 
 }
- 
+
 .paginacion ul {
     list-style:none;
     text-align: center;
+
 }
- 
+
 .paginacion ul li {
     display:inline-block;
     margin-right:10px;
+
 }
- 
+
 .paginacion ul li a {
     display:block;
     padding:10px 20px;
     color:#fff;
     background:#056839;
     text-decoration: none;
+
 }
- 
+
 .paginacion ul li a:hover {
     background:#367C5B;
+
 }
- 
+
 .paginacion ul li .active {
     background:#367C5B;
     font-weight:bold;
+
+}
+
+.piepagina {
+    background-color: #E7E8EA;
+    height: 100%;
+    text-align: center;
+    color: #6E6C6F;
+
+}
+
+.piepagina img {
+    float: left;
+
+}
+
+#telefono {
+    font-size: 12px;
 }

@@ -1,8 +1,8 @@
 <div id="noticia" class="fondo">
-	
+
 </div>
 <div class="paginador">
-	 
+
 </div>
 <img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
 
@@ -26,26 +26,23 @@
 /****cargar ultima noticia al comienzo******/
 
 $(document).ready(function(){
-    
+
 $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/noticias/0", function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
     if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
-    
+
   });
- 
+
   $( "<ul/>", {
     "class": "listado",
     html: items.join( "" )
   }).appendTo( "div#noticia" );
-});    
+});
 });
 
 
-//*******************************************
-
-
-
+//***********************
 
 $.get( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/countnoticia", function( data ) {
         //
@@ -53,16 +50,15 @@ $.get( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/countnotici
 $('a.numero').click(function(){
   var indice=($(this).attr('id'));
   indice=parseInt(indice)-1;
-  
+
   $('div#noticia').empty();
   $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/noticias/"+indice, function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
     if (key===key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
-    
-    
+
   });
- 
+
   $( "<ul/>", {
     "class": "listado",
     html: items.join( "" )
@@ -94,7 +90,7 @@ $('a.avpag').click(function(){
  $('a.4').html(val4);
   $('a.4').attr('id',val4);
  $('a.5').html(val5);
-  $('a.5').attr('id',val5);  
+  $('a.5').attr('id',val5);
 });
 
 //click en repag

@@ -3,8 +3,6 @@
 </div>
 
 
-
-
 <script>
 $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/documentos/all", function( data ) {
  // alert(JSON.parse(data[0]))
@@ -12,7 +10,7 @@ $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/documen
   $.each( data[0], function( key, val ) {
     items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
- 
+
   $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
