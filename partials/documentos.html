@@ -1,5 +1,6 @@
-<div id="descargas">
-	<p>Descargas</p>
+<h3>Documentos</h3>
+<div id="documentos">
+
 </div>
 
 
@@ -7,7 +8,7 @@
 
 <script>
 $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/documentos/all", function( data ) {
- // alert(JSON.parse(data[0]))
+
   var items = [];
   $.each( data[0], function( key, val ) {
       console.log(key, val);
@@ -17,7 +18,7 @@ $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/documen
   $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
-  }).appendTo( "div#descargas" );
+  }).appendTo( "div#documentos" );
 });
 
 </script>

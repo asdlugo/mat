@@ -2,14 +2,14 @@
 <div id="entes" class="fondo">
 
 </div>
-<img src="./img/logo_marca_agua.png" alt="MAT" id="logo">
+<img src="./img/logo_marca_agua.png" alt="MAT" id="logo" class="img-responsive">
 
 
 
 <script>
-$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/entes/all", function( data ) {
+$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/entes/all", function( entes ) {
     var items = [];
-    $.each( data , function( key, val ) {
+    $.each( entes , function( key, val ) {
         if (key===key)items.push( "<li id='" + key + "'><a target=blank href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
     });
     $( "<ul/>", {
