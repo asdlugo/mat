@@ -30,6 +30,7 @@ $(document).ready(function(){
 $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/noticias/0", function( datos ) {
   var items = [];
   $.each( datos, function( key, val ) {
+    console.log(val);
     if (key==key)items.push( "<li id='" + key + "'>" + val.descripcion + "</li>");
 
   });
