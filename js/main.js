@@ -12,17 +12,17 @@ $(document).ready(function(){
 /*
  *Carrusel de Videos
  */
-  $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/videos/all", function( data ) {
-      var items = [];
+  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/videos/all", function( data ) {
+    var items = [];
     $.each( data, function( key, val ) {
-      if (key===key){
-        items.push("<li><video controls src=http://noticias.agriculturaproductiva.gob.ve/upload/"+val.ruta+"></video></li>");
+      if (key===0){
+        items.push("<iframe class=embed-responsive-item src=" + val.descripcion + "></iframe>");
       }
     });
-    $( "<ul/>", {
-      html: items.join( "" )
-    }).appendTo("div#coverflow");
-    var coverflow = $("#coverflow").flipster();
+    $( "<div />", {
+        'class' : 'embed-responsive embed-responsive-16by9',
+        html: items.join( "" )
+    }).appendTo("div.video");
   });
 
  /*
@@ -89,10 +89,10 @@ app.directive('content', function() {
   }
 });
 
-app.directive('carrusel', function() {
+app.directive('video', function() {
   return {
     restrict: 'E',
-    templateUrl: './partials/carrusel.html',
+    templateUrl: './partials/video.html',
 
   }
 });
