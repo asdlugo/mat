@@ -7,16 +7,16 @@
 
 
 <script>
-$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/documentos/all", function( data ) {
+$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/sitio/web/app_dev.php/api/documentos/all", function( data ) {
 
   var items = [];
-  $.each( data[0], function( key, val ) {
-      console.log(key, val);
-    items.push( "<li id='" + val.id + "'><a href='"+ val.enlace +"'>" + val.descripcion + "</a></li>" );
+  $.each( data , function( key, val ) {
+      console.log(key);
+    items.push( "<li id=" + key + "><a href=http://www.agriculturaproductiva.gob.ve/upload/"+ val.ruta +">" + val.descripcion + "</a></li>" );
   });
 
   $( "<ul/>", {
-    "class": "my-new-list",
+    "class": "listado",
     html: items.join( "" )
   }).appendTo( "div#documentos" );
 });

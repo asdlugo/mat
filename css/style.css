@@ -143,16 +143,18 @@ p#menu-toggle {
 }
 
 .sidebar-nav li:hover ul#servicio {
-    height:120px;
+    height:400px;
     overflow-y:auto;
     overflow-x:hidden;
+    overflow: hidden;
 
 }
 
 .sidebar-nav li:hover ul#ministerio {
-    height:560px;
+    height:520px;
     overflow-y:auto;
     overflow-x:hidden;
+    overflow: hidden;
 }
 
 .sidebar-nav li a:active,
