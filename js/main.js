@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 /*
  *Carrusel de Videos
- */
+
   $.getJSON( "http://localhost/sitio/web/app_dev.php/api/videos/all", function( data ) {
     var items = [];
     $.each( data, function( key, val ) {
@@ -24,7 +24,7 @@ $(document).ready(function(){
         html: items.join( "" )
     }).appendTo("div.video");
   });
-
+ */
  /*
   *traer Banner
   */
@@ -36,14 +36,6 @@ $(document).ready(function(){
   });
 
 });
-
-
-
-
-
-
-
-
 
 
 
