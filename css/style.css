@@ -319,7 +319,8 @@ video {
 
 /************************paginador************************/
 .paginacion {
-    margin:20px;
+    margin: auto;
+    width: 44%;
 
 }
 
@@ -336,16 +337,15 @@ video {
 }
 
 .paginacion ul li a {
+    color: #000;
     display:block;
-    padding:10px 20px;
-    color:#fff;
-    background:#056839;
+    padding: 5px 15px;
     text-decoration: none;
 
 }
 
 .paginacion ul li a:hover {
-    background:#367C5B;
+    background:#5FAD7B;
 
 }
 

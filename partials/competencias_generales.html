@@ -1,4 +1,4 @@
-<div id="objetivos" class= "fondo">
+<div id="competencias" class= "fondo">
 
 </div>
 
@@ -6,7 +6,7 @@
 
 
 <script>
-$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/informacions/4", function( data ) {
+$.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/informacions/5", function( data ) {
  // alert(JSON.parse(data[0]))
   var items = [];
   $.each( data[0], function( key, val ) {
@@ -16,7 +16,7 @@ $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/informa
   $( "<ul/>", {
     "class": "listado",
     html: items.join( "" )
-  }).appendTo( "div#objetivos" );
+  }).appendTo( "div#competencias" );
 });
 
 </script>
