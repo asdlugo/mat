@@ -371,3 +371,9 @@ video {
 #telefono {
     font-size: 12px;
 }
+
+.listado img {
+    max-width: 100%;
+    height: auto;
+}
+
