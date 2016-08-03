@@ -11,27 +11,30 @@ $(document).ready(function(){
 
 /*
  *Videos
-
-  $.getJSON( "http://localhost/sitio/web/app_dev.php/api/videos/all", function( data ) {
+ */
+  $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/videos/all", function( data ) {
+    
     var items = [];
-    $.each( data, function( key, val ) {
-      if (key===0){
+
+    $.each( data, function( key, val )
+    {
+      if (key===0)
+      {
         items.push("<iframe class=embed-responsive-item src=" + val.descripcion + "></iframe>");
       }
+
     });
-    $( "<div />", {
-        'class' : 'embed-responsive embed-responsive-16by9',
-        html: items.join( "" )
+    $( "<div />", { 'class' : 'embed-responsive embed-responsive-16by9', html: items.join( "" )
     }).appendTo("div.video");
   });
- */
+
  /*
   *traer Banner
   */
   $.getJSON( "http://noticias.agriculturaproductiva.gob.ve/app_dev.php/api/banners/0", function( data ) {
       var item = [];
     $.each(data, function( key , val ){
-      console.log(val);
+      //console.log(val);
     $("header.menu").css('background-image', 'url(http://noticias.agriculturaproductiva.gob.ve/imagenes/'+ val.ruta_banner+')');
     });
   });
