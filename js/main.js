@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
 /*
- *Carrusel de Videos
+ *Videos
 
   $.getJSON( "http://localhost/sitio/web/app_dev.php/api/videos/all", function( data ) {
     var items = [];
